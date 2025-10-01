@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-@RestController("/api/v1/task")
+@RestController("api/v1/task")
 public class TaskController {
     TaskService taskService;
 
