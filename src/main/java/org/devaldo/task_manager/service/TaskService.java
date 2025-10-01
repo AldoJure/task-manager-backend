@@ -8,7 +8,7 @@ import org.devaldo.task_manager.entities.Task;
 import org.devaldo.task_manager.repositories.TaskRepository;
 
 public class TaskService {
-    TaskRepository taskRepository = new TaskRepositoryImpl();
+    TaskRepositoryImpl taskRepository = new TaskRepositoryImpl();
 
     public Task createTask(Long id, String title, String description, LocalDate dueDate, TaskStatus status){
         return taskRepository.createTask(id, title, description, dueDate, status);
