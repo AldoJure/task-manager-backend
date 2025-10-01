@@ -1,65 +1,29 @@
 package org.devaldo.task_manager.entities;
 
-import java.time.LocalDate;
-
-import org.devaldo.task_manager.Enums.TaskStatus;
-
 public class Task {
     private Long id;
     private String title;
     private String description;
-    private LocalDate dueDate;
-    private LocalDate createdDate;
-    private TaskStatus status;
-    
-    public Task(Long id, String title, String description, LocalDate dueDate, TaskStatus status) {
+    private boolean done;
+
+    public Task() {}
+
+    public Task(Long id, String title, String description, boolean done) {
+        this.id = id;
         this.title = title;
         this.description = description;
-        this.dueDate = dueDate;
-        this.createdDate = LocalDate.now();
-        this.status = status;
-        this.id = id;
+        this.done = done;
     }
 
-    public void setId(Long id){
-        this.id = id;
-    }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
-    public Long getId(){
-        return this.id;
-    }
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
 
-    public LocalDate getCreatedDate(){
-        return this.createdDate;
-    }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public LocalDate getDueDate() {
-        return dueDate;
-    }
-
-    public TaskStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(TaskStatus status) {
-        this.status = status;
-    }
-
-    
+    public boolean isDone() { return done; }
+    public void setDone(boolean done) { this.done = done; }
 }
