@@ -5,18 +5,28 @@ import java.time.LocalDate;
 import org.devaldo.task_manager.Enums.TaskStatus;
 
 public class Task {
+    private Long id;
     private String title;
     private String description;
     private LocalDate dueDate;
     private LocalDate createdDate;
     private TaskStatus status;
     
-    public Task(String title, String description, LocalDate dueDate, TaskStatus status) {
+    public Task(Long id, String title, String description, LocalDate dueDate, TaskStatus status) {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.createdDate = LocalDate.now();
         this.status = status;
+        this.id = id;
+    }
+
+    public void setId(Long id){
+        this.id = id;
+    }
+
+    public Long getId(){
+        return this.id;
     }
 
     public LocalDate getCreatedDate(){
